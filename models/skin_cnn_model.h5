@@ -1,0 +1,26 @@
+# train_skin_cnn_model.py
+import tensorflow as tf
+from tensorflow.keras import layers, models
+
+# Example dummy model
+model = models.Sequential([
+    layers.Input(shape=(64, 64, 3)),
+    layers.Conv2D(32, (3,3), activation='relu'),
+    layers.MaxPooling2D(2,2),
+    layers.Flatten(),
+    layers.Dense(1, activation='sigmoid')
+])
+
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+# Dummy data (replace with your real data)
+import numpy as np
+X_train = np.random.rand(10,64,64,3)
+y_train = np.random.randint(0,2,10)
+
+model.fit(X_train, y_train, epochs=1)
+
+# Save the model
+model.save("models/skin_cnn_model.h5")
+
+print("Skin CNN model saved.")

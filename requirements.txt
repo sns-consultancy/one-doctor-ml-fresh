@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+scikit-learn
+joblib
+tensorflow
+pydantic
+python-multipart
+reportlab
+yagmail
+openai
+sqlalchemy
+psycopg2-binary
