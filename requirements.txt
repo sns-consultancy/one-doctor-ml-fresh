@@ -10,3 +10,4 @@ yagmail
 openai
 sqlalchemy
 psycopg2-binary
+tensorflow==2.12.0
